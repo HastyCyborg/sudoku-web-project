@@ -31,7 +31,7 @@ export default function MainPage() {
     fontFamily: "'Outfit', sans-serif",
   };
 
-  const gameBoard = Array(9).fill(Array(9).fill());
+  const gameBoard = Array(9).fill(Array(9).fill(0));
 
   const refresher = (stateChangerFunc) => {
     return () => {
@@ -45,6 +45,7 @@ export default function MainPage() {
         gameBoard[i][j] = null;
       }
     }
+    console.log(gameBoard)
     refresher();
   };
 
